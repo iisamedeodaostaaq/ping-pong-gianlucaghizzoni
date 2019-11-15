@@ -11,7 +11,8 @@ yrac=300        #("posizione racchetta 2")
 score1=0        #("punteggio 1")
 score2=0        #("punteggio 2")
 start=0         #("timer")
-                
+ 
+## Prof.: Da qui in poi nessun commento: scarsa leggibilità
 def setup():
     start = millis()
             
@@ -21,6 +22,7 @@ def keyPressed():
         xrac=xrac-5
     if keyCode==RIGHT:
         xrac=xrac+5
+## Prof.: sposta la racchetta solo se non tocca i bordi e il comando è quello corretto
     if xrac<0:
         xrac=xrac+5
     if xrac>width-80:
@@ -80,6 +82,7 @@ def draw():
     if y==0:
         score2+=1
         
+## Prof.: Cosa è questa funzione???        
     def keyPressed():
      if key=="r":
       return
